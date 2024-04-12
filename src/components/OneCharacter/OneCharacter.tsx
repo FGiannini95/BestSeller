@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./oneCharacter.scss";
-import { CharacterData } from "../../App";
+import { CharacterData } from "../../../types";
+
 
 interface OneCharacterProps {
   elem: CharacterData;

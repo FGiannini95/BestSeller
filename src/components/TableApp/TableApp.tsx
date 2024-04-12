@@ -2,7 +2,8 @@ import React from "react";
 import "./tableApp.scss";
 import { AccordionApp } from "../AccordionApp/AccordionApp";
 import axios from "axios";
-import { CharacterData, InfoCharacter } from "../../App";
+import { CharacterData, InfoCharacter } from "../../../types";
+
 
 interface TableAppProps {
   findData: CharacterData[];
