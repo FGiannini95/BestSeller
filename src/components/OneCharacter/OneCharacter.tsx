@@ -6,6 +6,7 @@ import { CharacterData } from "../../../types";
 
 interface OneCharacterProps {
   elem: CharacterData;
+  //favorites:CharacterData[];
 }
 
 type Episode = {
@@ -14,8 +15,13 @@ type Episode = {
   url: string | undefined;
 }
 
+// type CheckboxProps = {
+//   isChecked: boolean;
+// }
+
 export const OneCharacter = ({ elem }: OneCharacterProps) => {
   const [episodes, setEpisodes] = useState<Episode[]>([]);
+  //const [isChecked, setIsChecked] = useState<CheckboxProps>();
 
   useEffect(() => {
     const fetchEpisodes = () => {
@@ -45,6 +51,15 @@ export const OneCharacter = ({ elem }: OneCharacterProps) => {
     return { season, chapter };
   };
 
+  // const handleCheckBoxChange = () => {
+  //   setIsChecked(!isChecked);
+  //   if (!isChecked && favorites.length < 3) {
+  //     setFavorites(prevFavorites => [...prevFavorites, elem]);
+  //   } else {
+  //     setFavorites(prevFavorites => prevFavorites.filter(item => item.id !== elem.id));
+  //   }
+  // };
+
   return (
     <>
       <div className="d-flex">
@@ -56,7 +71,12 @@ export const OneCharacter = ({ elem }: OneCharacterProps) => {
           <p>{elem?.species}</p>
           <p>{elem?.origin?.name}</p>
           <p>{elem?.location?.name}</p>
-          <input type="checkbox" id="checkbox1" />
+          <input 
+            type="checkbox"
+            id="checkbox1"
+            //checked={isChecked}
+            //onChange={handleCheckBoxChange}
+            />
           <label htmlFor="">Mark as favorite</label>
         </ul>
         <div className="divtable2">

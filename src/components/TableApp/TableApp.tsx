@@ -5,12 +5,14 @@ import axios from "axios";
 import { CharacterData, InfoCharacter } from "../../../types";
 
 
+
 interface TableAppProps {
   findData: CharacterData[];
   info: InfoCharacter;
   search: string;
   setData: React.Dispatch<React.SetStateAction<CharacterData[]>>;
   setInfo: React.Dispatch<React.SetStateAction<InfoCharacter>>;
+  favorites: CharacterData[];
 }
 
 export const TableApp = ({
@@ -19,6 +21,7 @@ export const TableApp = ({
   info,
   setInfo,
   search,
+  favorites
 }: TableAppProps) => {
 
   const chargeMore = (url: string) => {
@@ -58,7 +61,12 @@ export const TableApp = ({
                 <td>{elem.episode?.length}</td>
               </tr>
               <tr>
-                <AccordionApp elem={elem} index={index} colSpan={6} />
+                <AccordionApp 
+                  elem={elem}
+                  index={index}
+                  colSpan={6} 
+                  favorites={favorites}
+                  />
               </tr>
             </React.Fragment>
           ))}

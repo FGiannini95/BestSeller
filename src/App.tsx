@@ -6,29 +6,13 @@ import axios from "axios";
 import { InputSearch } from "./components/InputSearch/InputSearch";
 import { textSensitive } from "../helpers/utils";
 import { TableFavorites } from "./components/TableFavorites/TableFavorites";
-import {CharacterData,InfoCharacter} from '../types';
-
-// export type CharacterData = {
-//   id:number;
-//   name: string;
-//   image: string;
-//   gender:string;
-//   status:string;
-//   species:string;
-//   origin:{name:string};
-//   location:{name:string};
-//   episode:[];
-// }
-
-// export type InfoCharacter = {
-//   next: string;
-//   prev: string;
-// }
+import { CharacterData, InfoCharacter } from '../types';
 
 function App() {
   const [data, setData] = useState<CharacterData[]>([]);
-  const [info, setInfo] = useState<InfoCharacter>({next: "", prev: ""});
+  const [info, setInfo] = useState<InfoCharacter>({ next: "", prev: "" });
   const [search, setSearch] = useState<string>("");
+  const [favorites, setFavorites] = useState<CharacterData[]>([]);
 
   useEffect(() => {
     axios
@@ -58,7 +42,9 @@ function App() {
       </div>
       <div>
         <div>
-          <TableFavorites />
+        {favorites.length > 0 && ( 
+            <TableFavorites />
+          )}
         </div>
         <TableApp
           findData={findData}
@@ -66,6 +52,7 @@ function App() {
           info={info}
           setInfo={setInfo}
           search={search}
+          favorites={favorites}
         />
       </div>
     </>
