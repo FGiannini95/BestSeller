@@ -7,3 +7,16 @@
 button.accordion-button.collapsed::after {
   color: white;
 }
+
+.accordion-button:not(.collapsed){
+  background-color:#00B5CC;
+  border: 2px solid #B2DF28;
+}
+
+.accordion{
+--bs-accordion-btn-focus-box-shadow: none;
+}
+
+button::after, button:not(.collapsed)::after{
+  margin-right: .5rem;
+}

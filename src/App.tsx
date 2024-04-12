@@ -34,8 +34,9 @@ function App() {
   return (
     <>
       <div className=" divPrincipal">
-        <div className="d-flex align-items-center justify-content-center">
-          <img className="imgHome d-flex align-items-center justify-content-center" src="../src/assets/images/title.png" alt="" />
+        <div className="d-flex flex-column align-items-center justify-content-center py-3">
+          <img className="imgHome" src="../public/images/logo.png" alt="logo rick and morty" />
+          <p className="bestseller">&copy;BESTSELLER Edition</p>
         </div>
         <div className="d-flex align-content-center justify-content-between py-3">
           <h2 className="title">All characters</h2>
