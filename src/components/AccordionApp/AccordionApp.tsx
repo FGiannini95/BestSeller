@@ -1,26 +1,23 @@
 import Accordion from "react-bootstrap/Accordion";
 import { OneCharacter } from "../OneCharacter/OneCharacter";
 import './accordionApp.scss';
-import { CharacterData } from "../../../types";
 
 interface AccordionProps {
   colSpan: number;
   elem: any; 
   index: number;
-  favorites: CharacterData[];
 }
 
-export const AccordionApp: React.FC<AccordionProps> = ({ colSpan, elem, index, favorites }) => {
+export const AccordionApp: React.FC<AccordionProps> = ({ colSpan, elem, index }) => {
   
   return (
      <td colSpan={colSpan}> 
-      <Accordion>
+      <Accordion className="aver">
       <Accordion.Item eventKey={index.toString()}>
-          <Accordion.Header>See more</Accordion.Header>
-          <Accordion.Body>
+          <Accordion.Header></Accordion.Header>
+          <Accordion.Body >
             <OneCharacter 
               elem={elem}
-              favorites={favorites}
             />
           </Accordion.Body>
         </Accordion.Item>

@@ -1,3 +1,9 @@
-.tableDos{
-  table-layout: auto;
+.accordion-button {
+  background-color: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+
+button.accordion-button.collapsed::after {
+  color: white;
 }

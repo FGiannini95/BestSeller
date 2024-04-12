@@ -1,23 +1,26 @@
 .custom-table-container {
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin-left: 10vw;
+  margin-right: 10vw;
 }
 
 .custom-table {
   border-collapse: collapse;
-  border: 2px solid black;
+  border: 1px solid white;
   width: 100%;
 }
 
-.custom-table th,
-.custom-table td {
-  border: 1px solid #dddddd; 
-  text-align: center; 
-}
-
-.custom-table th,
-.custom-table td {
-  border: 1px solid #dddddd; 
+.custom-table th {
+  border: 1px solid white;
   text-align: center; 
   padding: 8px;
+  font-size: 1.2rem;
+}
+
+.custom-table td {
+  text-align: center;
+  padding: 8px;
+}
+
+.nameTable {
+  font-weight: bold;
 }

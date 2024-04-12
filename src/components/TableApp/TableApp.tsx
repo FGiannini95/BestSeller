@@ -12,7 +12,7 @@ interface TableAppProps {
   search: string;
   setData: React.Dispatch<React.SetStateAction<CharacterData[]>>;
   setInfo: React.Dispatch<React.SetStateAction<InfoCharacter>>;
-  favorites: CharacterData[];
+
 }
 
 export const TableApp = ({
@@ -21,7 +21,6 @@ export const TableApp = ({
   info,
   setInfo,
   search,
-  favorites
 }: TableAppProps) => {
 
   const chargeMore = (url: string) => {
@@ -36,12 +35,10 @@ export const TableApp = ({
 
   return (
     <div className="custom-table-container">
-      <h2>All the characteres
-      </h2>
       <table className="custom-table">
         <thead>
           <tr>
-            <th>Name</th>
+            <th className="thName">Name</th>
             <th>Gender</th>
             <th>Current Status</th>
             <th>Species</th>
@@ -53,7 +50,7 @@ export const TableApp = ({
           {findData?.map((elem, index) => (
             <React.Fragment key={index}>
               <tr>
-                <td>{elem.name}</td>
+                <td className="nameTable">{elem.name}</td>
                 <td>{elem.gender}</td>
                 <td>{elem.status}</td>
                 <td>{elem.species}</td>
@@ -65,7 +62,6 @@ export const TableApp = ({
                   elem={elem}
                   index={index}
                   colSpan={6} 
-                  favorites={favorites}
                   />
               </tr>
             </React.Fragment>
@@ -73,7 +69,7 @@ export const TableApp = ({
         </tbody>
       </table>
       {search === "" && (
-        <div className="d-flex justify-content-center pagination-container">
+        <div className="ddivPrincipal d-flex justify-content-between py-3 pagination-container">
           <div>
             {info?.prev && (
               <button onClick={() => chargeMore(info.prev)}>⟪</button>
