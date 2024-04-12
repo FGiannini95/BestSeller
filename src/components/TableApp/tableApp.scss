@@ -1,0 +1,23 @@
+.custom-table-container {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.custom-table {
+  border-collapse: collapse;
+  border: 2px solid black;
+  width: 100%;
+}
+
+.custom-table th,
+.custom-table td {
+  border: 1px solid #dddddd; 
+  text-align: center; 
+}
+
+.custom-table th,
+.custom-table td {
+  border: 1px solid #dddddd; 
+  text-align: center; 
+  padding: 8px;
+}
