@@ -9,8 +9,11 @@ Fetching data from the Ricky & Morty API, HTTP requests, and JSON handling
 2. Move to the application folder:
    - cd BestSellerTest /cd rick
 3. Install the dependencies:
-   - npm i
-4. Start the application:
+4. 
+```
+npm i
+```
+5. Start the application:
    - npm run dev
-## Videos
+## Explication
 - You can see my explanation of the project in the following link: 
