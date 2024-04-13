@@ -4,8 +4,6 @@ import { AccordionApp } from "../AccordionApp/AccordionApp";
 import axios from "axios";
 import { CharacterData, InfoCharacter } from "../../../types";
 
-
-
 interface TableAppProps {
   findData: CharacterData[];
   info: InfoCharacter;
@@ -34,7 +32,7 @@ export const TableApp = ({
   };
 
   return (
-    <div className="custom-table-container">
+    <div className="custom-table-container pb-5">
       <table className="custom-table">
         <thead>
           <tr>
@@ -72,12 +70,16 @@ export const TableApp = ({
         <div className="ddivPrincipal d-flex justify-content-between py-3 pagination-container">
           <div>
             {info?.prev && (
-              <button onClick={() => chargeMore(info.prev)}>⟪</button>
+              <span onClick={() => chargeMore(info.prev)} className="material-symbols-outlined">
+              arrow_back
+              </span>
             )}
           </div>
           <div>
             {info?.next && (
-              <button onClick={() => chargeMore(info.next)}>⟫</button>
+              <span onClick={() => chargeMore(info.next)} className="material-symbols-outlined">
+              arrow_forward
+              </span>
             )}
           </div>
         </div>

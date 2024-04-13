@@ -1,5 +1,5 @@
 import { ChangeEvent } from 'react';
-import './inputSearch.scss';
+
 
 interface InputSearchProps {
   search: string;

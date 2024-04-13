@@ -1,26 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0');
+
 .custom-table-container {
   margin-left: 10vw;
   margin-right: 10vw;
+
+  .custom-table {
+    border-collapse: collapse;
+    border: 1px solid white;
+    width: 100%;
+
+    .nameTable {
+      font-weight: bold;
+    }
+
+    th {
+      border: 1px solid white;
+      text-align: center;
+      padding: 8px;
+      font-size: 1.2rem;
+    }
+
+    td {
+      text-align: center;
+      padding: 8px;
+    }
+  }
+
 }
 
-.custom-table {
-  border-collapse: collapse;
-  border: 1px solid white;
-  width: 100%;
+.material-symbols-outlined {
+  cursor: pointer;
 }
 
-.custom-table th {
-  border: 1px solid white;
-  text-align: center; 
-  padding: 8px;
-  font-size: 1.2rem;
+@media (max-width: 800px) {
+  .custom-table-container{
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 }
 
-.custom-table td {
-  text-align: center;
-  padding: 8px;
-}
+@media (max-width: 700px) {
+  .custom-table-container {
+    font-size: 0.8rem;
+  }
 
-.nameTable {
-  font-weight: bold;
+  .custom-table th,
+  .custom-table td {
+    font-size: 0.9rem;
+    padding: 2px; 
+  }
 }

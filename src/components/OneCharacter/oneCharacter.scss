@@ -1,39 +1,71 @@
-.divtable2{
+.divtable2 {
   height: 190px;
   width: 73%;
   overflow-y: scroll;
   border: 1px solid black;
   position: relative;
- 
 
   .custom-table2 {
     border-collapse: collapse;
     width: 100%;
     height: 100%;
-    
-    thead{
+
+    thead {
       position: sticky;
       top: -1px;
       width: 100%;
-      z-index: 2; 
+      z-index: 2;
     }
-    
 
-    th{
+    th {
       border-right: 1px solid black;
       border-left: 1px solid black;
-      border-bottom: 1px solid black; 
+      border-bottom: 1px solid black;
       background-color: #e9e7e7;
     }
 
-    
-    tbody>tr{
+    tbody > tr {
       height: 50px;
-
     }
   }
 }
 
-.bgCard, .list-group-item{
+.bgCard,
+.list-group-item {
   background-color: #e9e7e7;
+}
+
+.checkbox-container {
+  margin-left: 1rem;
+}
+
+//1100 17rem
+//900 14 rem
+
+@media (min-width: 1500px) {
+ .divtable2{
+  width: 47%;
+ }
+}
+@media (max-width: 1500px) {
+  .divtable2{
+   width: 73%;
+  }
+ }
+
+@media (max-width: 730px) {
+  .divOneCharacter{
+    display: flex;
+    flex-direction: column;
+    .imgOneCharacter{
+      width: 21.5rem !important;
+      margin-bottom: 1rem;
+    }
+    .cardOneCharacter{
+      width: 21.5rem !important;
+    }
+  }
+  .divtable2{
+    width: 21.5rem
+  }
 }
