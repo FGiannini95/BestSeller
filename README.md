@@ -5,15 +5,20 @@ Fetching data from the Ricky & Morty API, HTTP requests, and JSON handling
 - Have React & VS installed
 ## Installation
 1. Clone this repository to your local machine:
-   - https://github.com/FGiannini95/BestSellerTest.git
+```
+https://github.com/FGiannini95/BestSellerTest.git
+```
 2. Move to the application folder:
-   - cd BestSellerTest /cd rick
+```
+cd BestSellerTest /cd rick
+```
 3. Install the dependencies:
-4. 
 ```
 npm i
 ```
-5. Start the application:
-   - npm run dev
+4. Start the application:
+```
+npm run dev
+```
 ## Explication
 - You can see my explanation of the project in the following link: 
