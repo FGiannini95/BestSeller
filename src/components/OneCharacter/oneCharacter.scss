@@ -53,6 +53,14 @@
   }
  }
 
+ //Ipad Air
+ @media (max-width: 820px) {
+  .divtable2{
+    width: 39rem
+  }
+}
+
+//Iphone14 ProMax
 @media (max-width: 730px) {
   .divOneCharacter{
     display: flex;
@@ -69,3 +77,4 @@
     width: 21.5rem
   }
 }
+

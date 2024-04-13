@@ -85,3 +85,10 @@ input::placeholder {
     padding: 0.5;
   }
 }
+
+/* Iphone 14 ProMax */
+@media (max-width: 430px) {
+  .imgHome, .bestseller {
+    margin-left: 12rem;
+  }
+}

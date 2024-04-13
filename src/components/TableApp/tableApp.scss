@@ -50,3 +50,15 @@
     padding: 2px; 
   }
 }
+
+//Iphone 14 ProMax
+ @media (max-width: 430px) {
+  .custom-table-container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .custom-table {
+    width: 50%;
+    margin-left: 0rem;
+  }
+}
