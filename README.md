@@ -1,5 +1,5 @@
-# To Do List
-Fetch data with Ricky & Morty API (https://rickandmortyapi.com/)
+# Ricky & Morty BESTSELLER Edition
+Fetching data from the Ricky & Morty API, HTTP requests, and JSON handling (https://rickandmortyapi.com/)
 ## Prerequisites
 - Have React & VS installed
 ## Installation
@@ -12,4 +12,4 @@ Fetch data with Ricky & Morty API (https://rickandmortyapi.com/)
 4. Start the application:
    - npm run dev
 ## Videos
-- You can see my explication of the project in the following link: 
+- You can see my explanation of the project in the following link: 
