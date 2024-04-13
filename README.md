@@ -1,4 +1,4 @@
-# Ricky & Morty: BESTSELLER Edition (© BestSeller)
+# Ricky & Morty: © BESTSELLER Edition 
 Fetching data from the Ricky & Morty API, HTTP requests, and JSON handling (https://rickandmortyapi.com/)
 ## Prerequisites
 - Have React & VS installed
