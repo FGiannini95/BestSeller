@@ -22,11 +22,10 @@ export const OneCharacter = ({ elem }: OneCharacterProps) => {
       axios
         .get(`https://rickandmortyapi.com/api/episode/${episodes.join(',')}`)
         .then((res) => {
-          console.log("Episodeeeeeee", res.data);
           setEpisodes(res.data?.length ? res.data : [res.data]);
         })
         .catch((err) => {
-          console.log(err);
+          (err);
         });
     };
     if(elem?.id){

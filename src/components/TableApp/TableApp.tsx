@@ -1,8 +1,9 @@
 import React from "react";
 import "./tableApp.scss";
-import { AccordionApp } from "../AccordionApp/AccordionApp";
 import axios from "axios";
 import { CharacterData, InfoCharacter } from "../../../types";
+import { OneCharacter } from "../OneCharacter/OneCharacter";
+import { Accordion } from "react-bootstrap";
 
 interface TableAppProps {
   findData: CharacterData[];
@@ -10,7 +11,6 @@ interface TableAppProps {
   search: string;
   setData: React.Dispatch<React.SetStateAction<CharacterData[]>>;
   setInfo: React.Dispatch<React.SetStateAction<InfoCharacter>>;
-
 }
 
 export const TableApp = ({
@@ -45,9 +45,9 @@ export const TableApp = ({
             <th>Episodes</th>
           </tr>
         </thead>
-        <tbody>
+          <Accordion as={'tbody'}>
           {findData?.map((elem, index) => (
-            <React.Fragment key={index}>
+            <React.Fragment key={`${index}_${elem.id}`}>
               <tr>
                 <td className="nameTable">{elem.name}</td>
                 <td>{elem.gender}</td>
@@ -57,16 +57,20 @@ export const TableApp = ({
                 <td>{elem.episode?.length}</td>
               </tr>
               <tr>
-                <AccordionApp 
-                  elem={elem}
-                  key={"acc" + index}
-                  index={index}
-                  colSpan={6} 
-                  />
+                <td colSpan={6}>
+                  <Accordion.Item eventKey={index.toString()}>
+                    <Accordion.Header></Accordion.Header>
+                    <Accordion.Body >
+                      <OneCharacter 
+                        elem={elem}
+                      />
+                    </Accordion.Body>
+                  </Accordion.Item>
+                </td>
               </tr>
             </React.Fragment>
           ))}
-        </tbody>
+          </Accordion>
       </table>
       {search === "" && (
         <div className="ddivPrincipal d-flex justify-content-between py-3 pagination-container">

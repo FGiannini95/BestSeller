@@ -17,12 +17,12 @@ function App() {
     axios
       .get("https://rickandmortyapi.com/api/character")
       .then((res) => {
-        console.log(res.data);
+        (res.data);
         setData(res.data.results);
         setInfo(res.data.info);
       })
       .catch((err) => {
-        console.log(err);
+        (err);
       });
   }, []);
 
