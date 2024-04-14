@@ -27,6 +27,7 @@ export const TableApp = ({
       .then((res) => {
         setData(res.data.results);
         setInfo(res.data.info);
+        window.scrollTo(0, 0);
       })
       .catch((err) => console.log(err));
   };

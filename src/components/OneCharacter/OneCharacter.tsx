@@ -18,26 +18,32 @@ export const OneCharacter = ({ elem }: OneCharacterProps) => {
   const [episodes, setEpisodes] = useState<Episode[]>([]);
 
   useEffect(() => {
-    const fetchEpisodes = () => {
+    const fetchEpisodes = (episodes: string[]) => {
       axios
-        .get("https://rickandmortyapi.com/api/episode")
+        .get(`https://rickandmortyapi.com/api/episode/${episodes.join(',')}`)
         .then((res) => {
-          console.log("Episode", res.data);
-
-          setEpisodes(res.data.results);
+          console.log("Episodeeeeeee", res.data);
+          setEpisodes(res.data?.length ? res.data : [res.data]);
         })
         .catch((err) => {
           console.log(err);
         });
     };
-    fetchEpisodes();
-  }, []);
+    if(elem?.id){
+      const allEpisodes = elem.episode.map((epi)=>{
+        const split = epi.split('/')
+        return split[split.length -1]
+      })
+      fetchEpisodes(allEpisodes);
+    }
 
-  const getEpisode = (url: string): Episode | null => {
-    if (!episodes || episodes.length === 0) return null;
-    const episode = episodes.find((ep) => ep.url === url);
-    return episode || null;
-  };
+  }, [elem?.id]);
+
+  // const getEpisode = (url: string): Episode | null => {
+  //   if (!episodes || episodes.length === 0) return null;
+  //   const episode = episodes.find((ep) => ep.url === url);
+  //   return episode || null;
+  // };
 
   const divideString = (string: string | undefined) => {
     if (!string) return { season: "Not available", chapter: "Not available" };
@@ -83,13 +89,13 @@ export const OneCharacter = ({ elem }: OneCharacterProps) => {
               </tr>
             </thead>
             <tbody>
-              {elem?.episode.map((url, index) => {
+              {episodes?.map((episode, index) => {
                 const { season, chapter } = divideString(
-                  getEpisode(url)?.episode
+                  episode.episode
                 );
                 return (
                   <tr key={index}>
-                    <td>{getEpisode(url)?.name}</td>
+                    <td>{episode.name}</td>
                     <td>{season}</td>
                     <td>{chapter}</td>
                   </tr>

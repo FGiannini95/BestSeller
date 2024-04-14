@@ -7,7 +7,7 @@ export type CharacterData = {
   species:string;
   origin:{name:string};
   location:{name:string};
-  episode:[];
+  episode:string[];
 }
 
 export type InfoCharacter = {
