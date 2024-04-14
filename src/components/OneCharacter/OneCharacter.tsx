@@ -39,12 +39,6 @@ export const OneCharacter = ({ elem }: OneCharacterProps) => {
 
   }, [elem?.id]);
 
-  // const getEpisode = (url: string): Episode | null => {
-  //   if (!episodes || episodes.length === 0) return null;
-  //   const episode = episodes.find((ep) => ep.url === url);
-  //   return episode || null;
-  // };
-
   const divideString = (string: string | undefined) => {
     if (!string) return { season: "Not available", chapter: "Not available" };
     const [season, chapter] = string.split("E");
@@ -63,10 +57,10 @@ export const OneCharacter = ({ elem }: OneCharacterProps) => {
               <Card.Body className="d-flex flex-column bgCard">
                 <Card.Title className="mb-auto">
                   {elem?.name}
-                  {/* <label className="checkbox-container">
+                  <label className="checkbox-container">
                     <input type="checkbox" />
                     <span className="checkmark"></span>
-                  </label> */}
+                  </label>
                 </Card.Title>
                 <ListGroup className="list-group-flush bgCard">
                   <ListGroup.Item>{elem?.gender}</ListGroup.Item>

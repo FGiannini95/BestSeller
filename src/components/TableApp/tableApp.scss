@@ -3,19 +3,11 @@
 .custom-table-container {
   margin-left: 10vw;
   margin-right: 10vw;
-  //position: relative;
 
   .custom-table {
     border-collapse: collapse;
     border: 1px solid white;
     width: 100%;
-
-    // thead {
-    //   position: sticky;
-    //   top: -1px;
-    //   width: 100%;
-    //   z-index: 2;
-    // }
 
     .nameTable {
       font-weight: bold;
@@ -33,7 +25,6 @@
       padding: 8px;
     }
   }
-
 }
 
 .material-symbols-outlined {

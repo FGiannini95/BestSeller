@@ -9,10 +9,10 @@ interface AccordionProps {
 }
 
 export const AccordionApp: React.FC<AccordionProps> = ({ colSpan, elem, index }) => {
-  
+
   return (
      <td colSpan={colSpan}> 
-      <Accordion className="aver">
+      <Accordion>
       <Accordion.Item eventKey={index.toString()}>
           <Accordion.Header></Accordion.Header>
           <Accordion.Body >

@@ -59,6 +59,7 @@ export const TableApp = ({
               <tr>
                 <AccordionApp 
                   elem={elem}
+                  key={"acc" + index}
                   index={index}
                   colSpan={6} 
                   />
