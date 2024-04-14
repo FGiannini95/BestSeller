@@ -1,6 +1,5 @@
 import { ChangeEvent } from 'react';
 
-
 interface InputSearchProps {
   search: string;
   setSearch:React.Dispatch<React.SetStateAction<string>>;

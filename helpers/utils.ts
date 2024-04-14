@@ -1,4 +1,4 @@
-export const textSensitive = (text, text2) => {
+export const textSensitive = (text: string, text2: string) => {
   return text
     .toUpperCase()
     .normalize("NFD") //unicode

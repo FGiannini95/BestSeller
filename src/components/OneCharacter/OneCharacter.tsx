@@ -56,10 +56,10 @@ export const OneCharacter = ({ elem }: OneCharacterProps) => {
               <Card.Body className="d-flex flex-column bgCard">
                 <Card.Title className="mb-auto">
                   {elem?.name}
-                  <label className="checkbox-container">
+                  {/* <label className="checkbox-container">
                     <input type="checkbox" />
                     <span className="checkmark"></span>
-                  </label>
+                  </label> */}
                 </Card.Title>
                 <ListGroup className="list-group-flush bgCard">
                   <ListGroup.Item>{elem?.gender}</ListGroup.Item>
