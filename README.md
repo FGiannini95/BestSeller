@@ -21,4 +21,4 @@ npm i
 npm run dev
 ```
 ## Explication
-- You can see the explication of the project in the following link: 
+- You can see the explication of the project in the following link: https://www.youtube.com/watch?v=pvqvem4PPd0
