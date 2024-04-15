@@ -5,6 +5,7 @@ import { TableApp } from "./components/TableApp/TableApp";
 import axios from "axios";
 import { InputSearch } from "./components/InputSearch/InputSearch";
 import { textSensitive } from "../helpers/utils";
+
 import { CharacterData, InfoCharacter } from '../types';
 
 function App() {
